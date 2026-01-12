@@ -8,176 +8,198 @@ export interface Proposal {
     palabra: string;
 }
 
-export const SOURCES: Record<string, { link: string; candidate?: string; logo?: string }> = {
+export const SOURCES: Record<string, { link: string; candidate?: string; logo?: string; photo?: string }> = {
     "Partido Morado": {
         link: "https://mpesije.jne.gob.pe/docs/6eb5d4b8-bd18-4cf0-ae0e-e250ca085f5f.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Partido_Morado.png"
+        candidate: "Mesías Guevara",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Partido_Morado.png",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Mes%C3%ADas_Guevara_(2011)_4x3.jpg"
     },
     "Partido Demócrata Verde": {
         link: "https://mpesije.jne.gob.pe/docs/3f2a939b-edf2-4505-b709-df775a5e0038.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Demócrata_Verde_(logo).svg"
+        candidate: "Alex Gonzales",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Demócrata_Verde_(logo).svg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Alex_Gonzales_Castillo.jpg"
     },
     "Alianza Fuerza Y Libertad": {
         link: "https://mpesije.jne.gob.pe/docs/d4ab9fba-d366-4083-bbf5-63aa465114d9.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Fuerza_Moderna.jpg"
+        candidate: "Fiorella Molinelli",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Fuerza_Moderna.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Fiorella_Mollinelli.jpg"
     },
     "Integridad Democrática": {
         link: "https://mpesije.jne.gob.pe/docs/ee89ac99-516b-4665-9297-413a0cf104de.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Integridad_democratica.jpg"
+        candidate: "Wolfgang Grozo",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Integridad_democratica.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Wolfgang_Groos.JPG"
     },
     "Partido Patriótico Del Perú": {
         link: "https://mpesije.jne.gob.pe/docs/6de519cb-bb4d-4319-a11b-be65d4438f4f.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Partido_Patriótico_del_Perú_(logo).svg"
+        candidate: "Herbert Caller",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Partido_Patriótico_del_Perú_(logo).svg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Herbert_Caller_Gutiérrez.jpg"
     },
     "Alianza Unidad Nacional": {
         link: "https://mpesije.jne.gob.pe/docs/ae0c9ba2-6278-4ca7-b077-16ed2cc39e76.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Unidad_Nacional_2025.jpg"
+        candidate: "Roberto Chiabra",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Unidad_Nacional_2025.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Ex_ministro_de_defensa_en_F%C3%B3rum_(cropped).jpg"
     },
     "Avanza País": {
         link: "https://mpesije.jne.gob.pe/docs/5857261c-789e-4599-ac05-4531654b10b4.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Avanza_País_Logo_2017-20.jpg"
+        candidate: "José Williams",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Avanza_País_Logo_2017-20.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9_Williams,_octubre_de_2022_1_(cropped).jpg"
     },
     "Perú Libre": {
         link: "https://mpesije.jne.gob.pe/docs/b2d25860-484e-4226-bd13-a57fb83c59cb.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Perú_Libre_logo.svg"
+        candidate: "Vladimir Cerrón",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Perú_Libre_logo.svg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Vladimir_Cerr%C3%B3n_(cropped).JPG"
     },
     "Ahora Nación": {
         link: "https://mpesije.jne.gob.pe/docs/7d70c5e1-2246-42e8-90c2-372aa1cf7f52.pdf",
-        candidate: "Alfonso López Chau",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Ahora_Nación.jpg"
+        candidate: "Alfonso López-Chau",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Ahora_Nación.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Alfonso_L%C3%B3pez-Chau.jpg"
     },
     "Prin": {
         link: "https://mpesije.jne.gob.pe/docs/3b89548c-81fa-479d-9ff9-2b7011fec7d2.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Partido_Político_PRIN_-_Símbolo.png"
+        candidate: "Walter Chirinos",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Partido_Político_PRIN_-_Símbolo.png",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Walter_Chirinos_%28cropped%29.png"
     },
     "Unido Perú": {
         link: "https://mpesije.jne.gob.pe/docs/2e5235de-e828-45f0-92cc-017a830abc33.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_partido_democratico_unido_peru.jpg"
+        candidate: "Wilson Barrantes",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_partido_democratico_unido_peru.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_placeholder.png"
     },
     "Cooperación Popular": {
         link: "https://mpesije.jne.gob.pe/docs/582e0d55-19ee-4a7f-85ef-c254be5bada6.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Cooperacion_Popular_Peru.png"
+        candidate: "Yonhy Lescano",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Cooperacion_Popular_Peru.png",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Yonhy_Lescano_Ancieta.jpg"
     },
     "Frente De La Esperanza": {
         link: "https://mpesije.jne.gob.pe/docs/d656b83f-3177-4053-a381-0f36ec99490a.pdf",
         candidate: "Fernando Olivera",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Frente_de_la_Esperanza_2021_(logo).svg"
-    },
-    "Perú Primero": {
-        link: "https://mpesije.jne.gob.pe/docs/f9624874-7cf6-4737-8db3-b73707c98e70.pdf",
-        candidate: "Martin Vizcarra",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Perú_Primero.png"
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Frente_de_la_Esperanza_2021_(logo).svg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Fernando_Olivera_(cropped).jpg"
     },
     "Fuerza Popular": {
         link: "https://mpesije.jne.gob.pe/docs/da4b943d-4344-4743-9362-a11ccf3054cb.pdf",
         candidate: "Keiko Fujimori",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_the_Popular_Force_(2024).svg"
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_the_Popular_Force_(2024).svg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Keiko_Fujimori_2_(cropped).jpg"
     },
     "Juntos Por El Perú": {
         link: "https://mpesije.jne.gob.pe/docs/3dd0e649-061c-4f31-8c3f-7a0836b58bde.pdf",
         candidate: "Roberto Sánchez",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_juntos_por_el_Peru.svg"
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_juntos_por_el_Peru.svg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Roberto_S%C3%A1nchez_(cropped).png"
     },
     "Partido Cívico Obras": {
         link: "https://mpesije.jne.gob.pe/docs/5643db28-6dbd-4d35-b79e-30d20d3bed85.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Partido_Civico_OBRAS.png"
+        candidate: "Ricardo Belmont",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Partido_Civico_OBRAS.png",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Ricardo_Belmont_1.jpg"
     },
     "Libertad Popular": {
         link: "https://mpesije.jne.gob.pe/docs/30bab146-a532-4d1b-87a7-e0f8078dc70b.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Libertad_Popular.jpg"
+        candidate: "Rafael Belaunde Llosa",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Libertad_Popular.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Rafael_Bela%C3%BAnde_Llosa.jpg"
     },
     "Partido Democrático Somos Perú": {
         link: "https://mpesije.jne.gob.pe/docs/1334ac30-c28e-42a5-8fc5-79a4638ccd2a.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Partido_Democrático_Somos_Perú.svg"
+        candidate: "George Forsyth",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Partido_Democrático_Somos_Perú.svg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/George_Forsyth_Sommer.jpg"
     },
     "Partido Aprista Peruano": {
         link: "https://mpesije.jne.gob.pe/docs/4d581919-b090-43d4-89e4-e284fde587b7.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/APRA_Peru_logo.svg"
+        candidate: "César Trelles Lara",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/APRA_Peru_logo.svg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%A9sar_Trelles_Lara_Portrait.jpg"
     },
     "Partido Del Buen Gobierno": {
         link: "https://mpesije.jne.gob.pe/docs/19bde703-f7f4-4715-92f3-b82e19bbe651.pdf",
         candidate: "Jorge Nieto",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Jorge_Nieto_Montesinos.jpg"
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Buen_Gobierno_2024.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Jorge_Nieto_Montesinos_(cropped).jpg"
     },
     "Progresemos": {
         link: "https://mpesije.jne.gob.pe/docs/b2f303a2-1e0d-4933-9d5f-04682a3710b0.pdf",
         candidate: "Hernando de Soto",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Progresemos.jpg"
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Progresemos.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Hernando_de_Soto_(cropped).jpg"
     },
     "Partido De Los Trabajadores Y Emprendedores": {
         link: "https://mpesije.jne.gob.pe/docs/6988c030-5c2b-40d8-b656-dc48899d4d8c.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_PTE_PERU.jpg"
+        candidate: "Napoleón Becerra",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_PTE_PERU.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_placeholder.png"
     },
     "Alianza Electoral: Venceremos": {
         link: "https://mpesije.jne.gob.pe/docs/9984addc-e998-43b1-920f-1178d4d973aa.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Venceremos_-_Peru.jpg"
+        candidate: "Álvaro Paz de la Barra",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Venceremos_-_Peru.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/%C3%81lvaro_Paz_de_la_Barra.jpg"
     },
     "Podemos Peru": {
         link: "https://mpesije.jne.gob.pe/docs/67b637b0-e2f7-47cc-8b23-fa16be709cc2.pdf",
-        candidate: "Daniel Urresti",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Podemos_Perú.png"
+        candidate: "José Luna Gálvez",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Podemos_Perú.png",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9_Luna_1.jpg"
     },
     "Salvemos Peru": {
         link: "https://mpesije.jne.gob.pe/docs/40877746-e670-42d3-840b-cdf683f46355.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Salvemos_al_Peru.png"
+        candidate: "Antonio Ortiz",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Salvemos_al_Peru.png",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_placeholder.png"
     },
     "Alianza Para El Progreso": {
         link: "https://mpesije.jne.gob.pe/docs/72576403-804a-4f28-85d3-bf4c7e648667.pdf",
         candidate: "César Acuña",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Alianza_para_el_Progreso_Peru.svg"
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Alianza_para_el_Progreso_Peru.svg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%A9sar_Acu%C3%B1a_Peralta.jpg"
     },
     "País Para Todos": {
         link: "https://mpesije.jne.gob.pe/docs/76291ee3-eba2-4c88-adef-2530f2d70bb8.pdf",
-        candidate: "Carlos Añaños",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Pais_para_todos.jpg"
+        candidate: "Carlos Álvarez",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Pais_para_todos.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Carlos_%C3%81lvarez_2025_%28cropped%29.jpg"
     },
     "Perú Acción": {
         link: "https://mpesije.jne.gob.pe/docs/f4e5c2c2-b0df-4033-adda-6617af774154.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Perú_Nación_2022.jpg"
+        candidate: "Francisco Diez Canseco",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Perú_Nación_2022.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_Diez_Canseco_T%C3%A1vara_Portrait.jpg"
     },
     "Perú Moderno": {
         link: "https://mpesije.jne.gob.pe/docs/12de1a7b-008b-43c5-9159-c62c9b45eab1.pdf",
-        candidate: "Carlos Canales",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Perú_moderno.jpg"
+        candidate: "Carlos Jaico",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Perú_moderno.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_placeholder.png"
     },
     "Sícreo": {
         link: "https://mpesije.jne.gob.pe/docs/e9d731a4-a79f-42e0-9ff7-29f6abe2bd3f.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Partido_Político_SíCreo.png"
+        candidate: "Carlos Espá",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Partido_Político_SíCreo.png",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Carlos_Espá_Gadea.jpg"
     },
     "Un Camino Diferente": {
         link: "https://mpesije.jne.gob.pe/docs/de662f06-21d5-4523-a3ec-4fcbacabe16c.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_un_camino_diferente.jpg"
+        candidate: "Rosario Fernández",
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_un_camino_diferente.jpg",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/ROSARIO_FERNANDEZ02.jpg"
     },
     "Renovación Popular": {
         link: "https://mpesije.jne.gob.pe/docs/2096b44a-f3b6-4c81-b03d-94fbfc9ac762.pdf",
         candidate: "Rafael López Aliaga",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Renovación_Popular_(Perú).png"
-    },
-    "Primero La Gente": {
-        link: "https://mpesije.jne.gob.pe/docs/ae0d6a5c-4344-4743-9362-a11ccf3054cb.pdf",
-        candidate: "Por Definir",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Primero_la_gente.svg"
+        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Renovación_Popular_(Perú).png",
+        photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Rafael_L%C3%B3pez_Aliaga_Portrait.png"
     }
 };
 
@@ -281,13 +303,6 @@ export const DATA: Proposal[] = [
     { id: 97, partido: "Frente De La Esperanza", eje: "Educación", propuesta: "Impulsar educación orientada a ciencia y tecnología con infraestructura moderna.", enfoque: "Social", prioridad: 4, palabra: "Tecnología" },
     { id: 98, partido: "Frente De La Esperanza", eje: "Infraestructura", propuesta: "Ejecución de trenes de alta velocidad Lima-Ica Lima-Trujillo y túnel trasandino.", enfoque: "APP/Privado", prioridad: 4, palabra: "Trenes" },
     { id: 99, partido: "Frente De La Esperanza", eje: "Medio Ambiente", propuesta: "Identificación de biodiversidad para programas de canje de deuda por conservación.", enfoque: "Social", prioridad: 3, palabra: "Biodiversidad" },
-    { id: 100, partido: "Perú Primero", eje: "Seguridad", propuesta: "Reforma de PNP especialización en cibercrimen and cárceles de máxima seguridad remotas.", enfoque: "Inversión Pública", prioridad: 5, palabra: "Cárceles" },
-    { id: 101, partido: "Perú Primero", eje: "Salud", propuesta: "Creación del Centro Nacional de Inteligencia en Salud and redes integradas regionales.", enfoque: "Tecnológico", prioridad: 5, palabra: "Inteligencia" },
-    { id: 102, partido: "Perú Primero", eje: "Economía", propuesta: "Implementación del Régimen Simplificado Progresivo MYPE and destrabe de inversiones.", enfoque: "Regulatorio", prioridad: 5, palabra: "Inversión" },
-    { id: 103, partido: "Perú Primero", eje: "Corrupción", propuesta: "Registro Nacional de Corrupción Policial Fiscal and Judicial con auditorías externas.", enfoque: "Tecnológico", prioridad: 5, palabra: "Transparencia" },
-    { id: 104, partido: "Perú Primero", eje: "Infraestructura", propuesta: "Rehabilitación de 5000 km de red vial and adopción masiva de metodología BIM.", enfoque: "Tecnológico", prioridad: 5, palabra: "Infraestructura" },
-    { id: 105, partido: "Perú Primero", eje: "Educación", propuesta: "Digitalización de trámites e internet gratuito para universidades and colegios públicos.", enfoque: "Tecnológico", prioridad: 4, palabra: "Internet" },
-    { id: 106, partido: "Perú Primero", eje: "Medio Ambiente", propuesta: "Reforestación de 100000 hectáreas nativas y actualización del Plan Nacional Ambiental.", enfoque: "Inversión Pública", prioridad: 4, palabra: "Reforestación" },
     { id: 107, partido: "Fuerza Popular", eje: "Seguridad", propuesta: "Construcción de 8 penales and sistema C5i con IA para análisis predictivo.", enfoque: "Tecnológico", prioridad: 5, palabra: "Videovigilancia" },
     { id: 108, partido: "Fuerza Popular", eje: "Economía", propuesta: "Reducción del 40% del tiempo en trámites mediante shock desregulatorio digital.", enfoque: "Regulatorio", prioridad: 5, palabra: "Desregulación" },
     { id: 109, partido: "Fuerza Popular", eje: "Educación", propuesta: "Construcción de 3000 colegios and adquisición de 6 millones de dispositivos tecnológicos.", enfoque: "Inversión Pública", prioridad: 5, palabra: "Infraestructura" },
@@ -378,6 +393,5 @@ export const DATA: Proposal[] = [
     { id: 194, partido: "Renovación Popular", eje: "Seguridad", propuesta: "Unidades Itinerantes de Pacificación y convenios de inteligencia con EE.UU.", enfoque: "Tecnológico", prioridad: 5, palabra: "Inteligencia" },
     { id: 195, partido: "Renovación Popular", eje: "Infraestructura", propuesta: "Línea ferroviaria Tumbes-Tacna y Tren Bioceánico Atlántico-Pacífico.", enfoque: "Inversión Pública", prioridad: 5, palabra: "Bioceánico" },
     { id: 196, partido: "Renovación Popular", eje: "Economía", propuesta: "Reducción del IGV e impulso al Banco PYME para financiamiento privado.", enfoque: "APP/Privado", prioridad: 4, palabra: "PYMES" },
-    { id: 197, partido: "Renovación Popular", eje: "Educación", propuesta: "Participación de padres en fiscalización y educación sanitaria ministerial.", enfoque: "Social", prioridad: 3, palabra: "Padres" },
-    { id: 198, partido: "Primero La Gente", eje: "Corrupción", propuesta: "Implementar auditorías ciudadanas digitales y transparencia radical en presupuesto.", enfoque: "Regulatorio", prioridad: 5, palabra: "Transparencia" }
+    { id: 197, partido: "Renovación Popular", eje: "Educación", propuesta: "Participación de padres en fiscalización y educación sanitaria ministerial.", enfoque: "Social", prioridad: 3, palabra: "Padres" }
 ];

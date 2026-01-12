@@ -273,17 +273,16 @@ export default function App() {
               </div>
             </motion.div>
           )}
-
           {activeTab === 'detalle' && (
-            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} key="detalle" className="space-y-8">
-              <header className="bg-red-600 p-12 rounded-[3.5rem] text-white shadow-2xl relative">
-                <div className="absolute inset-0 rounded-[3.5rem] overflow-hidden pointer-events-none">
-                  <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} key="detalle" className="space-y-6 md:space-y-8">
+              <header className="bg-red-600 p-6 md:p-12 rounded-3xl md:rounded-[3.5rem] text-white shadow-2xl relative z-20">
+                <div className="absolute inset-0 rounded-3xl md:rounded-[3.5rem] overflow-hidden pointer-events-none">
+                  <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-white/5 rounded-full -mr-10 -mt-10 md:-mr-20 md:-mt-20 blur-3xl"></div>
                 </div>
-                <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-8">
-                  <div>
-                    <h2 className="text-4xl font-black tracking-tighter uppercase italic leading-none mb-2">Ficha Técnica por Partido</h2>
-                    <p className="text-red-100 font-bold uppercase tracking-[0.3em] text-xs">Análisis Detallado y Perfil de Candidato</p>
+                <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
+                  <div className="text-center md:text-left">
+                    <h2 className="text-2xl md:text-4xl font-black tracking-tighter uppercase italic leading-tight mb-1 md:mb-2 text-white">Ficha Técnica</h2>
+                    <p className="text-red-100 font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] text-[10px] md:text-xs">Análisis Detallado y Perfil</p>
                   </div>
                   <div className="flex gap-4 w-full md:w-auto justify-end">
                     <div className="w-full md:w-[32rem] max-w-full">
@@ -298,31 +297,60 @@ export default function App() {
                 </div>
               </header>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="bg-white p-12 rounded-[4rem] border border-slate-100 shadow-sm flex items-center gap-10">
-                  <div className="w-48 h-48 rounded-[3rem] bg-white flex items-center justify-center relative overflow-hidden border-4 border-slate-100 shrink-0">
-                    {SOURCES[selectedPartidoDetalle]?.logo ? (
-                      <img src={SOURCES[selectedPartidoDetalle].logo} alt={selectedPartidoDetalle} className="w-full h-full object-contain p-4" />
-                    ) : (
-                      <UserIcon size={80} className="text-slate-200" />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/5 to-transparent"></div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+                <div className="bg-white p-6 md:p-12 rounded-3xl md:rounded-[4rem] border border-slate-100 shadow-sm flex flex-col md:flex-row items-center gap-8 md:gap-10">
+                  <div className="relative group shrink-0">
+                    {/* Contenedor Foto Candidato */}
+                    <motion.div
+                      initial={{ scale: 0.9, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      key={`${selectedPartidoDetalle}-photo`}
+                      className="w-48 h-56 rounded-[3.5rem] bg-slate-50 overflow-hidden border-4 border-white shadow-xl relative z-10"
+                    >
+                      {SOURCES[selectedPartidoDetalle]?.photo ? (
+                        <img
+                          src={SOURCES[selectedPartidoDetalle].photo}
+                          alt={SOURCES[selectedPartidoDetalle]?.candidate}
+                          className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-slate-100">
+                          <UserIcon size={64} className="text-slate-300" />
+                        </div>
+                      )}
+                    </motion.div>
+
+                    {/* Burbuja Logo Partido Overlap */}
+                    <motion.div
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.2 }}
+                      key={`${selectedPartidoDetalle}-logo`}
+                      className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full bg-white shadow-2xl border-4 border-white z-20 flex items-center justify-center p-2"
+                    >
+                      {SOURCES[selectedPartidoDetalle]?.logo ? (
+                        <img src={SOURCES[selectedPartidoDetalle].logo} alt={selectedPartidoDetalle} className="w-full h-full object-contain" />
+                      ) : (
+                        <div className="w-full h-full bg-red-50 rounded-full" />
+                      )}
+                    </motion.div>
                   </div>
-                  <div className="space-y-6">
+
+                  <div className="space-y-4 md:space-y-6 text-center md:text-left flex-1">
                     <div>
                       <span className="text-[10px] font-black text-red-600 uppercase tracking-[0.4em] block mb-2">CANDIDATO PRESIDENCIAL</span>
-                      <h3 className="text-4xl font-black text-slate-900 tracking-tighter leading-tight uppercase font-serif italic text-red-600">
+                      <h3 className={`font-black text-slate-900 tracking-tighter leading-tight uppercase font-serif italic ${getResponsiveFontSize(SOURCES[selectedPartidoDetalle]?.candidate || "Candidato", "text-2xl md:text-4xl")}`}>
                         {SOURCES[selectedPartidoDetalle]?.candidate || "Candidato 2026"}
                       </h3>
                     </div>
-                    <div className="grid grid-cols-2 gap-6">
+                    <div className="grid grid-cols-2 gap-4 md:gap-6">
                       <div>
                         <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Total Propuestas</p>
-                        <p className="text-2xl font-black text-slate-900">{DATA.filter(d => d.partido === selectedPartidoDetalle).length}</p>
+                        <p className="text-xl md:text-2xl font-black text-slate-900">{DATA.filter(d => d.partido === selectedPartidoDetalle).length}</p>
                       </div>
                       <div>
                         <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Eje Prioritario</p>
-                        <p className="text-2xl font-black text-slate-900 uppercase tracking-tighter">
+                        <p className="text-xl md:text-2xl font-black text-slate-900 uppercase tracking-tighter leading-none">
                           {(() => {
                             const counts = ejes.map(e => ({ eje: e, count: DATA.filter(d => d.partido === selectedPartidoDetalle && d.eje === e).length }));
                             return counts.sort((a, b) => b.count - a.count)[0].eje;
